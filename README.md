@@ -5,7 +5,7 @@
 ## 环境要求
 
 * ARMLinux
-    armLinux即可，理论上32位系统也可运行，需要自行编译预测库，[Paddle-Lite预编译库](https://paddle-lite.readthedocs.io/zh/latest/user_guides/release_lib.html)
+    armLinux即可，64位与32位系统都可运行，[Paddle-Lite预编译库](https://paddle-lite.readthedocs.io/zh/latest/user_guides/release_lib.html)
     
     * gcc g++ opencv cmake的安装（以下所有命令均在设备上操作）
     ```bash
@@ -51,14 +51,6 @@ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${PADDLE_LITE_DIR}/libs/${TARGET_ARCH_ABI} ./fa
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${PADDLE_LITE_DIR}/libs/${TARGET_ARCH_ABI} ./face ../models/face.nb ../images/9.png ../label
 ```
 
-  程序会运行10次，按键盘上的“0”即可停止运行程序（注意按“0"之前需要点击一下跳出来的图片结果预测框）
+  程序会运行10次，按键盘上的“0”或者空格即可停止运行程序（注意按“0"之前需要点击一下跳出来的图片结果预测框）
   
   项目默认环境是armlinux 64位。如果您的系统是armlinux32位的，需要自行在cmake.sh与 run.sh中将TARGET_ARCH_ABI=armv8 注释掉，并取消#TARGET_ARCH_ABI=armv7hf的注释即可。
-
-
-
-
-
-
-
-
